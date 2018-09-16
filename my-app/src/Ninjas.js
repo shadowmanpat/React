@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
 
 
-class Ninjas extends Component {
+const  Ninjas = ({ninjas}) =>{
 
-    render() {
-        const{ ninjas} = this.props;
+
+
         const ninjaList = ninjas.map(ninja => {
-           return  (
+            // if(ninja.age>23) {
+            //     return  (
+            //
+            //         <div className="ninja" key={ninja.id}>
+            //             <div>Name : {ninja.name}</div>
+            //             <div>Age : {ninja.age}</div>
+            //         </div>
+            //     )
+            // } else {
+            //         return null
+            // }
 
-               <div className="ninja" key={ninja.id}>
-                   <div>Name : {ninja.name}</div>
-                   <div>Age : {ninja.age}</div>
-               </div>
-           )
+            return ninja.age > 23 ? ( <div className="ninja" key={ninja.id}>
+                <div>Name : {ninja.name}</div>
+                <div>Age : {ninja.age}</div>
+            </div>) : (null);
 
         });
         return (
@@ -23,7 +32,7 @@ class Ninjas extends Component {
             </div>
 
         );
-    }
+
 }
 
 export default Ninjas;

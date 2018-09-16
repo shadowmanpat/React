@@ -6,10 +6,10 @@ import Ninjas from './Ninjas'
 class App extends Component {
     state = {
         ninjas : [
-            {name : "nikos", ages : "23"},
-            {name : "lena", ages : "23"},
-            {name : "mpamis", ages : "23"},
-            {name : "nikos", ages : "23"}
+            {name : "nikos", age : "23"},
+            {name : "lena", age : "22"},
+            {name : "mpamis", age : "25"},
+            {name : "nikos", age : "25"}
         ]
     };
   render() {
