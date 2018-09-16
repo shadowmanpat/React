@@ -6,12 +6,35 @@ import AddNinja from './AddNinja'
 class App extends Component {
     state = {
         ninjas : [
-            {name : "nikos", age : "23"},
-            {name : "lena", age : "22"},
-            {name : "mpamis", age : "25"},
-            {name : "nikos", age : "25"}
+            {name : "nikos", age : 23},
+            {name : "lena", age : 33},
+            {name : "mpamis", age : 45},
+            {name : "nikos", age : 28}
         ]
     };
+
+
+    addNinja = (ninja) => {
+        console.log(ninja)
+        ninja.id = Math.random();
+
+        let ninjasN = [...this.state.ninjas, ninja];
+
+        this.setState({
+            ninjas: ninjasN
+        });
+        console.log(this.state.ninjas)
+    };
+
+    deleteNinja = (id)  => {
+        console.log(id)
+        let ninjas = this.state.ninjas.filter(ninja =>{
+            return ninja.id !== id ? ninja : null
+        })
+        this.setState({
+            ninjas: ninjas
+        })
+    }
   render() {
     return (
       <div className="App">
@@ -23,8 +46,8 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
 
-        <Ninjas ninjas={this.state.ninjas}/>
-        <AddNinja/>
+        <Ninjas deleteNinja= {this.deleteNinja} ninjas={this.state.ninjas} />
+        <AddNinja addNinja ={this.addNinja} />
 
       </div>
     );
