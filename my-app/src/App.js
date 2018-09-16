@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 import Ninjas from './Ninjas'
-
+import AddNinja from './AddNinja'
 class App extends Component {
     state = {
         ninjas : [
@@ -24,7 +24,7 @@ class App extends Component {
         </p>
 
         <Ninjas ninjas={this.state.ninjas}/>
-
+        <AddNinja/>
 
       </div>
     );
