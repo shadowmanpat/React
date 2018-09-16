@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './Ninjas.css'
 
 const  Ninjas = ({ninjas,deleteNinja}) =>{
 
@@ -17,7 +17,7 @@ const  Ninjas = ({ninjas,deleteNinja}) =>{
             // } else {
             //         return null
             // }
-            ninja.id =  Math.random()
+
             return ninja.age > 23 ? ( <div className="ninja" key={ninja.id}>
                 <div>Name : {ninja.name}</div>
                 <div>Age : {ninja.age}</div>

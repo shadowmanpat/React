@@ -6,10 +6,10 @@ import AddNinja from './AddNinja'
 class App extends Component {
     state = {
         ninjas : [
-            {name : "nikos", age : 23},
-            {name : "lena", age : 33},
-            {name : "mpamis", age : 45},
-            {name : "nikos", age : 28}
+            {name : "nikos", age : 26, id : 0},
+            {name : "lena", age : 33, id : 2},
+            {name : "mpamis", age : 45 , id : 3},
+            {name : "nikos", age : 28, id : 4}
         ]
     };
 
@@ -30,7 +30,7 @@ class App extends Component {
         console.log(id)
         let ninjas = this.state.ninjas.filter(ninja =>{
             return ninja.id !== id ? ninja : null
-        })
+        });
         this.setState({
             ninjas: ninjas
         })
