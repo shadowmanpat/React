@@ -34,6 +34,14 @@ class App extends Component {
         this.setState({
             ninjas: ninjas
         })
+    };
+    //http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+    componentDidMount(){
+        console.log("componentDidMount")
+    }
+    componentDidUpdate(prevProps, prevState){
+        console.log("componentDidUpdate")
+        console.log(prevProps, prevState)
     }
   render() {
     return (
