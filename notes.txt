@@ -9,3 +9,10 @@ https://reactjs.org/docs/cdn-links.html
 
 Visual Studio Code
 https://code.visualstudio.com/docs/?dv=osx
+
+NodeJs
+https://nodejs.org/en/
+
+create-react-app
+https://github.com/facebook/create-react-app
+
